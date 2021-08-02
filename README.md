@@ -1,10 +1,10 @@
 # Holando Net
 
-## Proyecto: lh_ng_retenciones - Retenciones
+## Proyecto: lh-ng-retenciones - Retenciones
 
 ### Descripción: Contiene la app angular de retenciones 
 
-### web: /<app>/reportes/lh_ng_retenciones/#/list
+### web: /<app>/reportes/lh-ng-retenciones/#/list
 ### local: localhost:4200/#/list
 ### Ubicacion de la distribucion en web server: /oracle/ntapp/hnet3.0/reportes/lh-ng-retenciones
 
@@ -66,10 +66,10 @@ Generar distribución:
 Varios GitHub:
 git init
 git remote rm origin
-git remote add origin `https://github.com/<usuario>/<nombre_del_modulo>.git`
+git remote add origin "https://github.com/rlupianez/lh-ng-retenciones.git"
 git add --all
-git commit -m "first commit"
+git commit -m "primer commit"
 git branch -M main
-
 git push -u origin main
+
 ```
