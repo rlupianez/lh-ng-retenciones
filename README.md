@@ -65,12 +65,11 @@ Generar distribución:
 
 Varios GitHub:
 git init
-git add README.mdgit add
-git commit -m "first commit"
-git branch -M main
-
 git remote rm origin
 git remote add origin `https://github.com/<usuario>/<nombre_del_modulo>.git`
+git add --all
+git commit -m "first commit"
+git branch -M main
 
 git push -u origin main
 ```
