@@ -65,9 +65,12 @@ Generar distribución:
 
 Varios GitHub:
 git init
-git add README.md
+git add README.mdgit add
 git commit -m "first commit"
 git branch -M main
-git remote add origin `https://github.com/usuario/lh_ng_home.git`
+
+git remote rm origin
+git remote add origin `https://github.com/<usuario>/<nombre_del_modulo>.git`
+
 git push -u origin main
 ```
