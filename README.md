@@ -2,23 +2,26 @@
 
 ## Proyecto: lh-ng-retenciones - Retenciones
 
-### Descripción: Contiene la app angular de retenciones 
+### Descripción: Contiene la app angular de retenciones
 
-### web: /<app>/reportes/lh-ng-retenciones/#/list
+### web: /app/reportes/lh-ng-retenciones/#/list
+
 ### local: localhost:4200/#/list
+
 ### Ubicacion de la distribucion en web server: /oracle/ntapp/hnet3.0/reportes/lh-ng-retenciones
 
 ---
 
-## Versión: 4
+## Versión: 5
 
 ```text
 Fecha, Version, Programador, Tarea
 ----------------------------------------------------
 26/07/2021, v1, rlupianez, #44467 - version heredada de habito
 30/07/2021, v2, rlupianez,  #44467 - Mal funcionamiento en filtro desde y hasta. Se modificaron los parametros max y min del control de periodo.
-04/08/2021, V3, rlupianez, #45658 - Quitar organizador de poliza-en-cartera-list.config.ts
+04/08/2021, v3, rlupianez, #45658 - Quitar organizador de poliza-en-cartera-list.config.ts
 11/08/2021, v4, rlupianez,        - Comentar linea de organizador para que no aparezca en la popup de columnas visibles.
+12/08/2021, v5, rlupianez,        - Commit en Git 
 ```
 
 ---
@@ -37,6 +40,7 @@ production: false si se ejecuta localmente o true si se genera la distribución
 ```
 
 ---
+
 ## Notas
 
 ```text
