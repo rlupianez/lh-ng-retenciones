@@ -10,13 +10,15 @@
 
 ---
 
-## Versión: 2
+## Versión: 4
 
 ```text
 Fecha, Version, Programador, Tarea
 ----------------------------------------------------
 26/07/2021, v1, rlupianez, #44467 - version heredada de habito
-30/7/2021, v2, rlupianez,  #44467 - Mal funcionamiento en filtro desde y hasta. Se modificaron los parametros max y min del control de periodo.
+30/07/2021, v2, rlupianez,  #44467 - Mal funcionamiento en filtro desde y hasta. Se modificaron los parametros max y min del control de periodo.
+04/08/2021, V3, rlupianez, #45658 - Quitar organizador de poliza-en-cartera-list.config.ts
+11/08/2021, v4, rlupianez,        - Comentar linea de organizador para que no aparezca en la popup de columnas visibles.
 ```
 
 ---
@@ -68,7 +70,7 @@ git init
 git remote rm origin
 git remote add origin "https://github.com/rlupianez/lh-ng-retenciones.git"
 git add --all
-git commit -m "primer commit"
+git commit -m "Version 2"
 git branch -M main
 git push -u origin main
 

@@ -3,8 +3,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router, NavigationEnd } from '@angular/router';
 import { map, filter } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
-import { MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from "@angular/platform-browser";
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 import { UserService } from './core/services/user/user.service';
 import { ProgressBarService } from '@core/services/progress-bar.service';
 import { AuthService } from './core/services/auth/auth.service';
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
               private userService: UserService,
               public progressBarService: ProgressBarService,
               private fileService: FilesService,
-              private cdr : ChangeDetectorRef,
+              private cdr: ChangeDetectorRef,
               @Inject(DOCUMENT) private document: Document){
     
     /**
@@ -46,137 +46,138 @@ export class AppComponent implements OnInit, AfterViewInit {
      */
 
     this.matIconRegistry.addSvgIcon(
-      "notification",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/notification.svg")
-    )
+      'notification',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/notification.svg')
+    );
 
     this.matIconRegistry.addSvgIcon(
-      "down_excel",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/img/DownExcel.svg")
-    )
-    this.matIconRegistry.addSvgIcon(
-      "down_group",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/img/DownGroup.svg")
-    )
-    this.matIconRegistry.addSvgIcon(
-      "column_list",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/img/ColumnList.svg")
-             )         
-    this.matIconRegistry.addSvgIcon(
-      "home_building",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/building.svg")
-             )  
-    this.matIconRegistry.addSvgIcon(
-      "home_calculator",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/calculator.svg")
-             )  
-    this.matIconRegistry.addSvgIcon(
-      "home_car",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/car.svg")
-             )  
-    this.matIconRegistry.addSvgIcon(
-      "home_coin",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/coin.svg")
-             )
-    this.matIconRegistry.addSvgIcon(
-      "home_factory",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/factory.svg")
-             )
-    this.matIconRegistry.addSvgIcon(
-      "home_family",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/family.svg")
-             )
-    this.matIconRegistry.addSvgIcon(
-      "home_shopping_bag",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/shopping-bag.svg")
-             )
-    this.matIconRegistry.addSvgIcon(
-      "home_umbrella",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/umbrella.svg")
-             )
-    this.matIconRegistry.addSvgIcon(
-      "home_document",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/document.svg")
-             )
-    this.matIconRegistry.addSvgIcon(
-      "home_star",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/star.svg")
-             )
-
-    this.matIconRegistry.addSvgIcon(
-    "asegurado",
-    this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/life-insurance-1.svg")
-            )
+      'down_excel',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/img/DownExcel.svg')
+    );
     
     this.matIconRegistry.addSvgIcon(
-      "cobertura_poliza",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/cobertura.svg")
-              )
+      'down_group',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/img/DownGroup.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'column_list',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/img/ColumnList.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_building',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/building.svg')
+             ); 
+    this.matIconRegistry.addSvgIcon(
+      'home_calculator',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/calculator.svg')
+             ); 
+    this.matIconRegistry.addSvgIcon(
+      'home_car',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/car.svg')
+             ); 
+    this.matIconRegistry.addSvgIcon(
+      'home_coin',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/coin.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_factory',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/factory.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_family',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/family.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_shopping_bag',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/shopping-bag.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_umbrella',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/umbrella.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_document',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/document.svg')
+             );
+    this.matIconRegistry.addSvgIcon(
+      'home_star',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/star.svg')
+             );
+
+    this.matIconRegistry.addSvgIcon(
+    'asegurado',
+    this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/life-insurance-1.svg')
+            );
     
     this.matIconRegistry.addSvgIcon(
-      "detalle_bienes",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/clipboard.svg")
-              )
-
-    this.matIconRegistry.addSvgIcon(
-      "pagos",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/hand.svg")
-              )
-
-    this.matIconRegistry.addSvgIcon(
-      "files",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/files.svg")
-              )
-
-    this.matIconRegistry.addSvgIcon(
-      "contract",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/contract.svg")
-              )
+      'cobertura_poliza',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/cobertura.svg')
+              );
     
     this.matIconRegistry.addSvgIcon(
-      "group",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/group-3.svg")
-              )
+      'detalle_bienes',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/clipboard.svg')
+              );
 
     this.matIconRegistry.addSvgIcon(
-      "polizaactual",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/polizaactual.svg")
-              )
+      'pagos',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/hand.svg')
+              );
 
     this.matIconRegistry.addSvgIcon(
-      "alert",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/alert.svg")
-              )
+      'files',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/files.svg')
+              );
 
     this.matIconRegistry.addSvgIcon(
-      "credit_card",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/credit-card.svg")
-              )
+      'contract',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/contract.svg')
+              );
     
     this.matIconRegistry.addSvgIcon(
-      "siniestros",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/siniestros.svg")
-              )
+      'group',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/group-3.svg')
+              );
 
     this.matIconRegistry.addSvgIcon(
-      "comisiones_poliza",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/comisiones.svg")
-              )
+      'polizaactual',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/polizaactual.svg')
+              );
 
     this.matIconRegistry.addSvgIcon(
-      "poliza-cartera",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/poliza-cartera.svg")
-              )
+      'alert',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/alert.svg')
+              );
 
     this.matIconRegistry.addSvgIcon(
-      "home_search",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/buscador.svg")
-              )
+      'credit_card',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/credit-card.svg')
+              );
     
     this.matIconRegistry.addSvgIcon(
-      "search_asegurado",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/home-icons/search_asegurado.svg")
-              )
+      'siniestros',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/siniestros.svg')
+              );
+
+    this.matIconRegistry.addSvgIcon(
+      'comisiones_poliza',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/comisiones.svg')
+              );
+
+    this.matIconRegistry.addSvgIcon(
+      'poliza-cartera',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/poliza-cartera.svg')
+              );
+
+    this.matIconRegistry.addSvgIcon(
+      'home_search',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/buscador.svg')
+              );
+    
+    this.matIconRegistry.addSvgIcon(
+      'search_asegurado',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-icons/search_asegurado.svg')
+              );
     /**
      *  Seteo de session id, comentar al pasar a prod
      */
@@ -185,7 +186,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(){
-    //document.cookie = "sid=8087421105"; // comentar al distribuir
+    //document.cookie = 'sid=8291106950'; // comentar al distribuir 
     const session_id = this.cookieService.get('sid');
     
     console.log('cookie laholando', session_id);
@@ -193,11 +194,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     const basePath = this.fileService.getCurrentBasePath();
 
 
-    var OSName="Unknown OS";
-    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
-    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
-    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+    let OSName='Unknown OS';
+    if (navigator.appVersion.indexOf('Win')!=-1) OSName='Windows';
+    if (navigator.appVersion.indexOf('Mac')!=-1) OSName='MacOS';
+    if (navigator.appVersion.indexOf('X11')!=-1) OSName='UNIX';
+    if (navigator.appVersion.indexOf('Linux')!=-1) OSName='Linux';
 
     if (OSName == "Windows"){
       this.loadStyle( basePath + '/assets/css/styles-windows.css');

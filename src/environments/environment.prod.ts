@@ -2,6 +2,6 @@
  * Datos del entorno de producción
  */
 export const environment = {
-  production: true,
+  production: false,
   apiUrl: '/rws',
 };

@@ -17,8 +17,8 @@ import { FilterToolbarService } from '@core/services/components/filter-toolbar.s
 declare let $: any;
 
 const columns = {
- // select : { label: 'Select', class: 'col', visible: false },
-  cod_prdorg : { label: 'Organizador', visible: true, class: 'col', suffix: 'org_apeynom', cellStyle: 'text-left' },
+  // select : { label: 'Select', class: 'col', visible: false },
+  //cod_prdorg : { label: 'Organizador', visible: false, class: 'col', suffix: 'org_apeynom', cellStyle: 'text-left' },
   cod_prod : { label: 'Productor', visible: true, class: 'col', suffix: 'prod_apeynom', cellStyle: 'text-left' },
   periodo: { label: 'Periodo', visible: true, class: 'col' },
   nro_comprobante: { label: 'Comprobante', visible: true, class: 'col' },
@@ -58,7 +58,7 @@ const filters = {
         max: moment().add(0,'years'),
         min: moment(),
         maxHasta: moment().add(0,'years'),
-        maxDesde: moment()
+        maxDesde: moment(),
       },
       defaultValues : {
         hasta: "",
@@ -242,7 +242,7 @@ export class RetencionesListComponent implements OnInit, OnDestroy {
         p_periodo_desde: oFilterData['p_periodo'].desde.format('DD-MM-YYYY').toString(),
         p_periodo_hasta: oFilterData['p_periodo'].hasta.format('DD-MM-YYYY').toString(),
       };
-      
+      console.log('p_periodo_desde=>'+periodos.p_periodo_desde);
       delete oFilterData['p_periodo'];
   
       this.filterModel = Object.assign(oFilterData,periodos);
